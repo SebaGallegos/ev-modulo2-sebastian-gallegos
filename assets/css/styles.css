@@ -3,5 +3,25 @@
 }
 
 #principal {
+    position: relative;
     background-color: #2e6c1d;
+    overflow: hidden;
+}
+
+#principal::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url(https://images.pexels.com/photos/7534101/pexels-photo-7534101.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#principal > * {
+    position: relative;
+    z-index: 2;
 }
