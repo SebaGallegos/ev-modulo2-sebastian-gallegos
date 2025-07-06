@@ -46,10 +46,9 @@
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <h5 class="card-title">Ransomware</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRansomware">
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalRansomware">
                                     Más información
                                 </button>
                             </div>
@@ -57,19 +56,21 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <h5 class="card-title">Phishing</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalPhishing">
+                                    Más información
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <h5 class="card-title">Ataque DDoS</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalDDoS">
+                                    Más información
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -101,7 +102,7 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordAmenazas">
                             <div class="accordion-body">
-                                Utiliza contraseñas largas, únicas y difíciles de adivinar. Considera el uso de un gestor de contraseñas para almacenarlas de forma segura.
+                                Un ejemplo común de phishing es el envío de correos electrónicos que aparentan ser de empresas de mensajería, informando al usuario sobre un supuesto paquete retenido por cargos aduaneros pendientes. Estos mensajes suelen incluir detalles como un código de seguimiento y enlaces o botones llamativos para “programar la entrega”. El objetivo es engañar a la persona para que haga clic y proporcione información personal, datos bancarios o realice pagos innecesarios, aprovechándose de la urgencia y la apariencia legítima del mensaje.
                             </div>
                         </div>
                     </div>
@@ -124,21 +125,62 @@
         <div class="modal fade" id="modalRansomware" tabindex="-1" aria-labelledby="modalRansomwareLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalRansomwareLabel">¿Qué es el ransomware?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                    El ransomware es una forma de software malicioso que impide el acceso a archivos o sistemas al cifrarlos, y luego exige un pago —generalmente en criptomonedas— a cambio de su liberación. Los atacantes suelen infiltrarse en una red, activan el malware que bloquea los datos, y presentan una nota de rescate. Aunque pagar el rescate puede parecer una solución rápida, no garantiza la recuperación de los archivos y fomenta futuras actividades delictivas. Por eso, se recomienda contar con respaldos seguros y desconectados, así como medidas preventivas que dificulten el acceso no autorizado.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalRansomwareLabel">¿Qué es el ransomware?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                        El ransomware es una forma de software malicioso que impide el acceso a archivos o sistemas al cifrarlos, y luego exige un pago —generalmente en criptomonedas— a cambio de su liberación. Los atacantes suelen infiltrarse en una red, activan el malware que bloquea los datos, y presentan una nota de rescate. Aunque pagar el rescate puede parecer una solución rápida, no garantiza la recuperación de los archivos y fomenta futuras actividades delictivas. Por eso, se recomienda contar con respaldos seguros y desconectados, así como medidas preventivas que dificulten el acceso no autorizado.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Modal phishing -->
+        <div class="modal fade" id="modalPhishing" tabindex="-1" aria-labelledby="modalPhishingLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPhishingLabel">¿Qué es el phishing?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                        El phishing es un tipo de ciberataque que utiliza correos electrónicos, mensajes de texto, llamadas telefónicas o sitios web falsos para engañar a las personas y hacer que revelen información confidencial, descarguen malware o realicen acciones perjudiciales sin saberlo. A diferencia de otros ataques que explotan fallos técnicos, el phishing se basa en manipular el comportamiento humano mediante tácticas de presión o suplantación de identidad. Los atacantes suelen hacerse pasar por figuras de confianza —como colegas, jefes o marcas conocidas— para lograr que la víctima haga clic en enlaces maliciosos, abra archivos adjuntos o proporcione datos sensibles. Esta técnica es una de las más comunes y costosas en el mundo de la ciberseguridad, ya que explota la confianza más que la tecnología.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal DDoS -->
+        <div class="modal fade" id="modalDDoS" tabindex="-1" aria-labelledby="modalDDoSLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDDoSLabel">¿Qué es un ataque DDoS?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                        Un ataque DDoS (Distributed Denial of Service) es una técnica maliciosa que busca saturar un sitio web, servidor o red con un volumen masivo de tráfico falso, impidiendo que los usuarios legítimos accedan a los servicios. Para lograrlo, los atacantes crean una red de dispositivos infectados —conocida como botnet— que actúan de forma coordinada para enviar solicitudes simultáneas al objetivo. Esta sobrecarga puede provocar interrupciones, lentitud o incluso la caída total del sistema. Los ataques DDoS no solo afectan la disponibilidad de los servicios, sino que también pueden generar pérdidas económicas y dañar la reputación de una organización.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
