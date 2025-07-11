@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../assets/js/index.js" defer></script>
     <title>Consejos de seguridad - Ciberseguridad</title>
 </head>
 <body>
@@ -41,7 +42,80 @@
 
     <section id="principal" class="d-flex flex-column justify-content-center align-items-center vh-100 text-white">
         <h1 class="display-3 fw-bold text-center">Consejos de Ciberseguridad</h1>
-        <p class="lead text-center mt-3"></p>
+        <p class="lead text-center mt-3">
+            • Usa contraseñas fuertes y únicas para cada cuenta.<br>
+            • Activa la autenticación en dos pasos siempre que sea posible.<br>
+            • No compartas información personal en sitios no confiables.<br>
+            • Mantén tu software y antivirus actualizados.<br>
+            • Desconfía de correos y enlaces sospechosos.<br>
+            • Utiliza redes Wi-Fi seguras y evita las públicas para información sensible.
+        </p>
+        <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#testModal">Realizar test de seguridad</button>
+        <form id="contactForm" class="bg-dark p-4 rounded w-75">
+            <h2 class="h4 mb-3">Solicita más información</h2>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="text" class="form-control" id="email" name="email">
+                <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div id="formSuccess" class="text-success mt-2 d-none">¡Mensaje enviado correctamente!</div>
+        </form>
     </section>
+
+    <!-- Modal Test de Seguridad -->
+    <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="testModalLabel">Test de Seguridad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form id="testForm">
+              <div class="mb-3">
+                <label class="form-label">¿Cuál es una contraseña segura?</label>
+                <select class="form-select" name="pregunta1" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="a">123456</option>
+                  <option value="b">Tu nombre y fecha de nacimiento</option>
+                  <option value="c">Una combinación de letras, números y símbolos</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">¿Qué debes hacer si recibes un correo sospechoso?</label>
+                <select class="form-select" name="pregunta2" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="a">Abrir todos los enlaces</option>
+                  <option value="b">Ignorarlo o reportarlo</option>
+                  <option value="c">Responder con tus datos personales</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">¿Por qué es importante actualizar el software?</label>
+                <select class="form-select" name="pregunta3" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="a">Para obtener nuevas funciones y parches de seguridad</option>
+                  <option value="b">No es importante</option>
+                  <option value="c">Solo para cambiar el diseño</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-success">Enviar respuestas</button>
+            </form>
+            <div id="testFeedback" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
